@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Material Design Example</string>
+    <string name="list_content_1">Lorem ipsum dolor sit amet</string>
+    <string name="list_content_2">consectetur adipiscing elit</string>
+    <string name="list_content_3">Ut enim ad minim veniam</string>
+    <string name="list_content_4">Duis aute irure dolor in reprehenderit</string>
+    <string name="list_content_5">sunt in culpa qui officia deserunt</string>
+
+    <string name="add_to_list_button">Agregar elemento</string>
+    <string name="infinite_list_entry_message">Mensaje %1$d</string>
 </resources>
