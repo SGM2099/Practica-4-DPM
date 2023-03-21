@@ -11,6 +11,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/launch_second_activity"
+            android:text="@string/second_activity_launcher_button"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,8 +1,11 @@
 package mx.unam.fciencias.materialdesign;
 
 import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedList;
@@ -24,6 +27,28 @@ public class InfiniteListAdapter extends RecyclerView.Adapter<InfiniteListAdapte
         notifyItemInserted(i);
     }
 
+    @NonNull
+    @Override
+    public ListEntry onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        TextView tv = (TextView) LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.infinite_list_entry,
+                parent,
+                false);
+        return new ListEntry(tv);
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ListEntry holder, int position) {
+        holder.entryText.setText(DATASET.get(position));
+    }
+
+    @Override
+    public int getItemCount() {
+        return DATASET.size();
+    }
+
     static class ListEntry extends RecyclerView.ViewHolder {
         private TextView entryText;
 
@@ -31,5 +56,7 @@ public class InfiniteListAdapter extends RecyclerView.Adapter<InfiniteListAdapte
             super(entryTV);
             entryText = entryTV;
         }
+
     }
+
 }
