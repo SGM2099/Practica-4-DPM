@@ -15,4 +15,9 @@
 
     <string name="menu_close_app">Cerrar</string>
 
+    <string name="about">Ejemplo de MAterial DEsign y Vistas en Android.</string>
+    <string name="ok">Ok.</string>
+
+    <string name="shared_button_transitionName" translatable="false">botonCompartido</string>
+
 </resources>
