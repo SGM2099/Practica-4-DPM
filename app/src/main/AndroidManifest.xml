@@ -14,6 +14,8 @@
         <activity
             android:name=".DetailActivity"
             android:exported="false" />
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".SecondActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,10 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity">
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SecondActivity" />
+                android:value=".MainActivity" />
         </activity>
     </application>
 
