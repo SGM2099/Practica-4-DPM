@@ -21,7 +21,7 @@ public abstract class MainMenuActivity extends AppCompatActivity {
 
     public static final byte RESULT_EXIT = 2;
 
-    private final ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(
+    protected final ActivityResultLauncher<Intent> resultLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override
@@ -66,6 +66,24 @@ public abstract class MainMenuActivity extends AppCompatActivity {
             return true;
         }
         //cerrar app:
+
+        if (intId == R.id.menu_close_app) {
+
+            setResult(RESULT_EXIT);
+
+            finish();
+
+            return true;
+
+        }
+
+        if (intId == android.R.id.home) {
+
+            finish();
+
+            return true;
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
