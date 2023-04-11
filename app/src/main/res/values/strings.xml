@@ -15,9 +15,16 @@
 
     <string name="menu_close_app">Cerrar</string>
 
-    <string name="about">Ejemplo de MAterial DEsign y Vistas en Android.</string>
+    <string name="about">Ejemplo de Material Design y Vistas en Android.</string>
     <string name="ok">Ok.</string>
 
     <string name="shared_button_transitionName" translatable="false">botonCompartido</string>
+
+    <string name="color_detail_description">Descripción del color.</string>
+
+    <string name="red_color_component">Rojo: %1$f f - %2$d</string>
+    <string name="green_color_component">Verde: %1$f f - %2$d</string>
+    <string name="blue_color_component">Azul: %1$f f - %2$d</string>
+    <string name="hex_color_component">Hex: %1$f f - %2$d</string>
 
 </resources>
