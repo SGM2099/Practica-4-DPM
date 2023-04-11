@@ -59,7 +59,7 @@ public class SecondActivity extends MainMenuActivity implements InfiniteListAdap
         } else {
             Intent intent = new Intent(this, DetailActivity.class);
             intent.putExtra(DetailsFragment.INDEX_KEY, clickItemIndex);
-            intent.putExtra(DetailsFragment.ENTRY_MESSAGE_KEY, clickItemIndex);
+            intent.putExtra(DetailActivity.ENTRY_MESSAGE_KEY, clickItemIndex);
             intent.putExtra(DetailsFragment.MASTER_LIST_SIZE_KEY, clickItemIndex);
             startActivity(intent);
 

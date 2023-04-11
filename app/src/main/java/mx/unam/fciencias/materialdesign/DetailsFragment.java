@@ -19,8 +19,8 @@ import android.widget.TextView;
  */
 public class DetailsFragment extends Fragment {
 
-    private static final String INDEX_KEY = "mx.unam.fciencias.materialdesign.INDEX";
-    private static final String MASTER_LIST_SIZE_KEY =
+    public static final String INDEX_KEY = "mx.unam.fciencias.materialdesign.INDEX";
+    public static final String MASTER_LIST_SIZE_KEY =
             "mx.unam.fciencias.materialdesign.MASTER_LIST_SIZE";
 
     private int selectedIndex;
