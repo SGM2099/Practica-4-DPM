@@ -56,7 +56,7 @@ public class DetailsFragment extends Fragment {
         TextView hex = rootView.findViewById(R.id.hex_value_tv);
         float[] rgb = generateColorFromIndex();
         int[] intRgb = new int[] {(int) (rgb[0] * 255), (int) (rgb[1] * 255), (int) (rgb[2] * 255)};
-        int indexColor = Build.VERSION.SDK_INT < Build.VERSION_CODES.0 ?
+        int indexColor = Build.VERSION.SDK_INT < Build.VERSION_CODES.O ?
                 Color.rgb(intRgb[0], intRgb[1], intRgb[2]) :
                     Color.rgb(rgb[0], rgb[1], rgb[2]);
         colorView.setBackgroundColor(indexColor);
