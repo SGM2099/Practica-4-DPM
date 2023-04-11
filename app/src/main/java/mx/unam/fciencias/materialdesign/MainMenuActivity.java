@@ -77,6 +77,12 @@ public abstract class MainMenuActivity extends AppCompatActivity {
 
         }
 
+        if (intId == R.id.menu_settings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }
+
+
         if (intId == android.R.id.home) {
 
             finish();
