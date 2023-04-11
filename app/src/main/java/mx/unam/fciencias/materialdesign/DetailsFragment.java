@@ -69,4 +69,22 @@ public class DetailsFragment extends Fragment {
         hex.setText(Integer.toHexString(indexColor));
         return rootView;
     }
+    private float[] generateColorFromIndex() {
+        float datasetThird = masterListSize /3f;
+        byte third;
+        int previousThird;
+        if (masterListSize == 1 || selectedIndex < datasetThird) {
+            previousThird = selectedIndex + 1;
+            third = 1;
+        } else {
+            previousThird = (int) datasetThird;
+            third = (byte) (selectedIndex < datasetThird * 2 ? 2 : 3);
+        }
+        float[] rgb = new float[3];
+        rgb[0] = (selectedIndex + 1) / (third * datasetThird);
+        rgb[1] = (selectedIndex + 1 - previousThird) / (2 * datasetThird);
+        rgb[2] = third == 3 ? (selectedIndex + 1f) / masterListSize : 0;
+        if (rgb[0] > 1) rgb[0] = 1;
+        return rgb;
+    }
 }
