@@ -12,10 +12,16 @@
         android:theme="@style/Theme.MaterialDesignExample"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailActivity"
             android:exported="false" />
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".SecondActivity" />
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".SecondActivity" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -2,6 +2,7 @@ package mx.unam.fciencias.materialdesign;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityOptionsCompat;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class MainActivity extends MainMenuActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
         launchSecondActivityButton = findViewById(R.id.launch_second_activity);
         launchSecondActivityButton.setOnClickListener(this::launchSecondActivity);
     }
