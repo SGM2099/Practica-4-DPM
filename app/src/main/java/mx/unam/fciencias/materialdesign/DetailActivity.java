@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 public class DetailActivity extends MainMenuActivity {
 
+    public static final String ENTRY_MESSAGE_KEY = "mx.unam.fciencias.materialdesign.ENTRY_MESSAGE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +25,9 @@ public class DetailActivity extends MainMenuActivity {
         }
         Bundle detailFragmentArgs = new Bundle();
         detailFragmentArgs.putInt(DetailsFragment.INDEX_KEY,
-                startIntent.getIntExtra(DetailsFragment.INDEX_KEY, -1));
+                starIntent.getIntExtra(DetailsFragment.INDEX_KEY, -1));
         detailFragmentArgs.putInt(DetailsFragment.MASTER_LIST_SIZE_KEY,
-                startIntent.getIntExtra(DetailsFragment.MASTER_LIST_SIZE_KEY, -1));
+                starIntent.getIntExtra(DetailsFragment.MASTER_LIST_SIZE_KEY, -1));
         DetailsFragment detailsFragment = new DetailsFragment();
         detailsFragment.setArguments(detailFragmentArgs);
         getSupportFragmentManager().beginTransaction().add(
